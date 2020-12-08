@@ -1,2 +1,0 @@
-# SBCSensor
-SBCSensor

@@ -4,7 +4,7 @@ import socket
 import RPi.GPIO as GPIO
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-result = s.connect_ex(('172.16.54.134', 22))
+result = s.connect_ex(('SBCServer', 22))
 
 if result == 0:
    print ("SBCServer is UP")

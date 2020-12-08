@@ -13,7 +13,7 @@ sudo pip3 install smbus2 RPi.bme280 RPi.GPIO
 #Install and configure
 cd ${DIR}; git clone https://github.com/rtUPM/SBCSensor
 chmod u+x ${DIR}/SBCSensor/scripts/*
-mv ${DIR}/SBCSensor/scripts/checkSBCServer /etc/cron.d/
+sudo mv ${DIR}/SBCSensor/scripts/checkSBCServer /etc/cron.d/
 sudo chown root:root /etc/cron.d/chekcSBCServer
 
 #Enable I2C Interface

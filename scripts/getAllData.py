@@ -12,8 +12,6 @@ bus = smbus2.SMBus(port)
 
 calibration_params = bme280.load_calibration_params(bus, address)
 
-# the sample method will take a single reading and return a
-# compensated_reading object
 data = bme280.sample(bus, address, calibration_params)
 
 GPIO.setmode(GPIO.BOARD)
@@ -34,14 +32,4 @@ if humidifier == 1:
 else:
     humidifier =1
 
-#print("%.1f %.1f %d %d" % (data.temperature,data.humidity,GPIO.input(13),GPIO.input(11)))
 print("%.1f %.1f %d %d" % (data.temperature,data.humidity,heater,humidifier))
-
-
-
-#print("%.1f" % data.temperature)
-#print("%.1f" % data.humidity)
-
-# there is a handy string representation too
-#print(data)
-
